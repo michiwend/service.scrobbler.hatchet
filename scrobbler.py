@@ -295,6 +295,9 @@ class MyPlayer(xbmc.Player):
         album       = self.getMusicInfoTag().getAlbum()
         title       = self.getMusicInfoTag().getTitle()
         duration    = str(self.getMusicInfoTag().getDuration())
+        # get duration from xbmc.Player if the MusicInfoTag duration is invalid
+        if int(duration) <= 0:
+            duration = str(int(self.getTotalTime()))
         track       = str(self.getMusicInfoTag().getTrack())
         mbid        = '' # musicbrainz id is not available
         comment     = self.getMusicInfoTag().getComment()
