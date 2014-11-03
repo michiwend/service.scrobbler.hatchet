@@ -32,7 +32,7 @@ def log(txt):
 class Main:
     def __init__( self ):
         self._service_setup()
-        while (not xbmc.abortRequested) and (not self.Exit):
+        while (not self.Monitor.abortRequested()) and (not self.Exit):
             xbmc.sleep(1000)
 
     def _service_setup( self ):
@@ -320,3 +320,4 @@ class MyMonitor(xbmc.Monitor):
 if ( __name__ == "__main__" ):
     log('script version %s started' % __addonversion__)
     Main()
+log('script stopped')
