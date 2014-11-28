@@ -304,6 +304,13 @@ class MyPlayer(xbmc.Player):
         path        = self.getPlayingFile()
         timestamp   = int(time.time())
         source      = 'P'
+        # streaming radio of provides both artistname and songtitle as one label
+        if title and not artist:
+            try:
+                artist = title.split(' - ')[0]
+                title = title.split(' - ')[1]
+            except:
+                pass
         tracktags   = [artist, album, title, duration, track, mbid, comment, path, timestamp, source]
         log('#DEBUG# tracktags: %s' % tracktags)
         return tracktags
