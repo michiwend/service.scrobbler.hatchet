@@ -1,2 +1,2 @@
 v0.0.1
-- initial release
+- initial release based on service.scrobbler.librefm v2.19.0
