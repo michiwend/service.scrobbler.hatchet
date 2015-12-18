@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="service.scrobbler.librefm" name="Libre.fm Scrobbler" version="2.0.4" provider-name="Team Kodi">
+<addon id="service.scrobbler.hatchet" name="hatchet.is Scrobbler" version="2.0.4" provider-name="Michael Wendland">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
 	<extension point="xbmc.service" library="scrobbler.py" start="login">
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="af">Scrobble diens vir libre.fm</summary>
-		<summary lang="ar">خدمه سكروبلر لموقع libre.fm</summary>
-		<summary lang="be">Scrobble service for libre.fm</summary>
-		<summary lang="bg">Скробблер услуга за libre.fm</summary>
-		<summary lang="ca">Servei de Scrobble per libre.fm</summary>
-		<summary lang="cs">Scrobble služba pro libre.fm</summary>
-		<summary lang="de">Scrobbler Service für libre.fm</summary>
-		<summary lang="el">Υπηρεσία κοινοποίησης (scrobble) για το libre.fm</summary>
-		<summary lang="en">Scrobble service for libre.fm</summary>
-		<summary lang="en_NZ">Scrobble service for libre.fm</summary>
-		<summary lang="en_US">Scrobble service for libre.fm</summary>
-		<summary lang="es">Envío de canciones a libre.fm</summary>
-		<summary lang="fa_IR">سرویس Scrobble برای libre.fm</summary>
-		<summary lang="fr">Service Scrobbler pour libre.fm</summary>
-		<summary lang="fr_CA">Service scrobble pour Libre.fm</summary>
-		<summary lang="gl">Servizo Scrobble para libre.fm</summary>
-		<summary lang="he">שירות סקרובל עבור libre.fm</summary>
-		<summary lang="hi"> libre.fm सेवा के लिए स्क्रोबल करे</summary>
-		<summary lang="hr">Skroblajte uslugu za libre.fm</summary>
-		<summary lang="hu">Scrobble szolgáltatás a libre.fm-hez</summary>
-		<summary lang="id">Layanan Scrobble untuk libre.fm</summary>
-		<summary lang="is">Sköfu þjónusta fyrir libre.fm</summary>
-		<summary lang="it">Servizio Scrobble per libre.fm</summary>
-		<summary lang="ko">libre.fm 스크로블 서비스</summary>
-		<summary lang="lt">Scrobble paslauga, skirta libre.fm</summary>
-		<summary lang="nl">Scrobble service voor libre.fm</summary>
-		<summary lang="pl">Usługa skroblera dla Libre.fm</summary>
-		<summary lang="pt">Serviço de scrobble para libre.fm</summary>
-		<summary lang="pt_BR">Serviço Scrobble para libre.fm</summary>
-		<summary lang="sv">Inskickningstjänst för libre.fm</summary>
-		<summary lang="zh">libre.fm 的 Scrobble 服务</summary>
-		<description lang="af">Scrobbler sal inligting van die liedjies wat jy geluister het in Kodi indien by libre.fm</description>
-		<description lang="ar">سكروبلر سيُرسل معلومات عن اﻷغانى التى كنت تستمع لها فى إكس بى إم سى الى موقع libre.fm</description>
-		<description lang="be">Scrobbler will submit info of the songs you've been listening to in Kodi to libre.fm</description>
-		<description lang="bg">Скробблера ще изпраща информация за слушаната от вас музиката в Kodi към libre.fm</description>
-		<description lang="ca">El Scrobbler enviarà informació de les cançons que escoltis en l'Kodi a libre.fm</description>
-		<description lang="cs">Scrobbler pošle info o písničce, kterou právě posloucháte v Kodi na libre.fm</description>
-		<description lang="de">Scrobboler wird Informationen über die Songs welche du in Kodi hörst an libre.fm übermitteln</description>
-		<description lang="el">Το Scrobbler θα υποβάλλει πληροφορίες των τραγουδιών που ακούτε στο libre.fm</description>
-		<description lang="en">Scrobbler will submit info of the songs you've been listening to in Kodi to libre.fm</description>
-		<description lang="en_NZ">Scrobbler will submit info of the songs you've been listening to in Kodi to libre.fm</description>
-		<description lang="en_US">Scrobbler will submit info of the songs you've been listening to in Kodi to libre.fm</description>
-		<description lang="es">Scrobble envía información de las canciones que escucha en Kodi a libre.fm</description>
-		<description lang="fa_IR">Scrobbler اطلاعات ترانه هایی که شما در Kodi گوش داده اید را به libre.fm ارائه می دهد</description>
-		<description lang="fr">Scrobbler va soumettre les informations des chansons écoutées via Kodi à libre.fm</description>
-		<description lang="fr_CA">Le scrobbler va envoyer les infos des morceaux que vous avez écoutées dans Kodi à Libre.fm</description>
-		<description lang="gl">Scrobbler enviará info. das cancións que está a escoitar no Kodi a libre.fm</description>
-		<description lang="he">הסקרובלר ישלח מידע על השירים המושמעים ב-Kodi אל libre.fm</description>
+		<summary lang="af">Scrobble diens vir hatchet.is</summary>
+		<summary lang="ar">خدمه سكروبلر لموقع hatchet.is</summary>
+		<summary lang="be">Scrobble service for hatchet.is</summary>
+		<summary lang="bg">Скробблер услуга за hatchet.is</summary>
+		<summary lang="ca">Servei de Scrobble per hatchet.is</summary>
+		<summary lang="cs">Scrobble služba pro hatchet.is</summary>
+		<summary lang="de">Scrobbler Service für hatchet.is</summary>
+		<summary lang="el">Υπηρεσία κοινοποίησης (scrobble) για το hatchet.is</summary>
+		<summary lang="en">Scrobble service for hatchet.is</summary>
+		<summary lang="en_NZ">Scrobble service for hatchet.is</summary>
+		<summary lang="en_US">Scrobble service for hatchet.is</summary>
+		<summary lang="es">Envío de canciones a hatchet.is</summary>
+		<summary lang="fa_IR">سرویس Scrobble برای hatchet.is</summary>
+		<summary lang="fr">Service Scrobbler pour hatchet.is</summary>
+		<summary lang="fr_CA">Service scrobble pour hatchet.is</summary>
+		<summary lang="gl">Servizo Scrobble para hatchet.is</summary>
+		<summary lang="he">שירות סקרובל עבור hatchet.is</summary>
+		<summary lang="hi"> hatchet.is सेवा के लिए स्क्रोबल करे</summary>
+		<summary lang="hr">Skroblajte uslugu za hatchet.is</summary>
+		<summary lang="hu">Scrobble szolgáltatás a hatchet.is-hez</summary>
+		<summary lang="id">Layanan Scrobble untuk hatchet.is</summary>
+		<summary lang="is">Sköfu þjónusta fyrir hatchet.is</summary>
+		<summary lang="it">Servizio Scrobble per hatchet.is</summary>
+		<summary lang="ko">hatchet.is 스크로블 서비스</summary>
+		<summary lang="lt">Scrobble paslauga, skirta hatchet.is</summary>
+		<summary lang="nl">Scrobble service voor hatchet.is</summary>
+		<summary lang="pl">Usługa skroblera dla hatchet.is</summary>
+		<summary lang="pt">Serviço de scrobble para hatchet.is</summary>
+		<summary lang="pt_BR">Serviço Scrobble para hatchet.is</summary>
+		<summary lang="sv">Inskickningstjänst för hatchet.is</summary>
+		<summary lang="zh">hatchet.is 的 Scrobble 服务</summary>
+		<description lang="af">Scrobbler sal inligting van die liedjies wat jy geluister het in Kodi indien by hatchet.is</description>
+		<description lang="ar">سكروبلر سيُرسل معلومات عن اﻷغانى التى كنت تستمع لها فى إكس بى إم سى الى موقع hatchet.is</description>
+		<description lang="be">Scrobbler will submit info of the songs you've been listening to in Kodi to hatchet.is</description>
+		<description lang="bg">Скробблера ще изпраща информация за слушаната от вас музиката в Kodi към hatchet.is</description>
+		<description lang="ca">El Scrobbler enviarà informació de les cançons que escoltis en l'Kodi a hatchet.is</description>
+		<description lang="cs">Scrobbler pošle info o písničce, kterou právě posloucháte v Kodi na hatchet.is</description>
+		<description lang="de">Scrobboler wird Informationen über die Songs welche du in Kodi hörst an hatchet.is übermitteln</description>
+		<description lang="el">Το Scrobbler θα υποβάλλει πληροφορίες των τραγουδιών που ακούτε στο hatchet.is</description>
+		<description lang="en">Scrobbler will submit info of the songs you've been listening to in Kodi to hatchet.is</description>
+		<description lang="en_NZ">Scrobbler will submit info of the songs you've been listening to in Kodi to hatchet.is</description>
+		<description lang="en_US">Scrobbler will submit info of the songs you've been listening to in Kodi to hatchet.is</description>
+		<description lang="es">Scrobble envía información de las canciones que escucha en Kodi a hatchet.is</description>
+		<description lang="fa_IR">Scrobbler اطلاعات ترانه هایی که شما در Kodi گوش داده اید را به hatchet.is ارائه می دهد</description>
+		<description lang="fr">Scrobbler va soumettre les informations des chansons écoutées via Kodi à hatchet.is</description>
+		<description lang="fr_CA">Le scrobbler va envoyer les infos des morceaux que vous avez écoutées dans Kodi à hatchet.is</description>
+		<description lang="gl">Scrobbler enviará info. das cancións que está a escoitar no Kodi a hatchet.is</description>
+		<description lang="he">הסקרובלר ישלח מידע על השירים המושמעים ב-Kodi אל hatchet.is</description>
 		<description lang="hi">स्क्रॉबबलेर गानो की सूची को जमा करेगा जो आपने एक्स बी एम सी से लिब्रे.एफ म मे सुना है</description>
-		<description lang="hr">Skrobler će podnositi informacije pjesama koje ste slušali u Kodi-u na libre.fm</description>
-		<description lang="hu">A Scrobbler az Kodi által játszott zeneszám információinak eljuttatása a libre.fm-hez</description>
-		<description lang="id">Scrobbler akan mengirim info dari lagu yang telah Anda dengarkan di Kodi ke libre.fm</description>
-		<description lang="is">Scrobbler mun senda upplýsingar um lög sem þú hefur hlustað á með Kodi til libre.fm</description>
-		<description lang="it">Scrobbler inviera' informazioni delle canzoni che stai ascoltando in Kodi a libre.fm</description>
-		<description lang="ko">스크로블러는 Kodi에서 감상중인 노래 정보를 libre.fm에 전송합니다</description>
-		<description lang="lt">Scrobbler įkels į libre.fm jūsų per Kodi klausytų dainų informaciją</description>
-		<description lang="nl">De scrobbler verstuurt informatie over de nummers die u heeft geluisterd in Kodi naar libre.fm</description>
-		<description lang="pl">Skrobler wysyła informacje o utworach, których słuchasz przez Kodi, do serwisu Libre.fm</description>
-		<description lang="pt">O scrobbler enviará info das músicas que tem ouvido no Kodi para o libre.fm</description>
-		<description lang="pt_BR">Scrobbler irá submeter suas músicas quando estiver ouvindo no Kodi para libre.fm</description>
-		<description lang="sv">Inskickningstjänst för att skicka in info om låtarna du har lyssnat på i Kodi till libre.fm</description>
-		<description lang="zh">Scrobbler 会将你在 Kodi 中听过的歌曲信息提交到 libre.fm</description>
+		<description lang="hr">Skrobler će podnositi informacije pjesama koje ste slušali u Kodi-u na hatchet.is</description>
+		<description lang="hu">A Scrobbler az Kodi által játszott zeneszám információinak eljuttatása a hatchet.is-hez</description>
+		<description lang="id">Scrobbler akan mengirim info dari lagu yang telah Anda dengarkan di Kodi ke hatchet.is</description>
+		<description lang="is">Scrobbler mun senda upplýsingar um lög sem þú hefur hlustað á með Kodi til hatchet.is</description>
+		<description lang="it">Scrobbler inviera' informazioni delle canzoni che stai ascoltando in Kodi a hatchet.is</description>
+		<description lang="ko">스크로블러는 Kodi에서 감상중인 노래 정보를 hatchet.is에 전송합니다</description>
+		<description lang="lt">Scrobbler įkels į hatchet.is jūsų per Kodi klausytų dainų informaciją</description>
+		<description lang="nl">De scrobbler verstuurt informatie over de nummers die u heeft geluisterd in Kodi naar hatchet.is</description>
+		<description lang="pl">Skrobler wysyła informacje o utworach, których słuchasz przez Kodi, do serwisu hatchet.is</description>
+		<description lang="pt">O scrobbler enviará info das músicas que tem ouvido no Kodi para o hatchet.is</description>
+		<description lang="pt_BR">Scrobbler irá submeter suas músicas quando estiver ouvindo no Kodi para hatchet.is</description>
+		<description lang="sv">Inskickningstjänst för att skicka in info om låtarna du har lyssnat på i Kodi till hatchet.is</description>
+		<description lang="zh">Scrobbler 会将你在 Kodi 中听过的歌曲信息提交到 hatchet.is</description>
 		<language></language>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
-		<forum>http://forum.kodi.tv/showthread.php?tid=158540</forum>
+        <!--<forum>http://forum.kodi.tv/showthread.php?tid=158540</forum>-->
 		<website></website>
 		<email></email>
-		<source>https://github.com/XBMC-Addons/service.scrobbler.librefm/</source>
+		<source>https://github.com/michiwend/service.scrobbler.hatchet</source>
 	</extension>
 </addon>

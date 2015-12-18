@@ -36,7 +36,7 @@ class Main:
             xbmc.sleep(1000)
 
     def _service_setup( self ):
-        self.LibrefmURL           = 'http://turtle.libre.fm/'
+        self.HatchetURL           = 'https://api.hatchet.is'
         self.ClientId             = 'xbm'
         self.ClientVersion        = '0.2'
         self.ClientProtocol       = '1.2.1'
@@ -47,13 +47,13 @@ class Main:
     def _get_settings( self ):
         log('#DEBUG# reading settings')
         service    = []
-        LibrefmSubmitSongs = ADDON.getSetting('librefmsubmitsongs') == 'true'
-        LibrefmSubmitRadio = ADDON.getSetting('librefmsubmitradio') == 'true'
-        LibrefmUser        = ADDON.getSetting('librefmuser').lower()
-        LibrefmPass        = ADDON.getSetting('librefmpass')
-        if (LibrefmSubmitSongs or LibrefmSubmitRadio) and LibrefmUser and LibrefmPass:
+        HatchetSubmitSongs = ADDON.getSetting('hatchetsubmitsongs') == 'true'
+        HatchetSubmitRadio = ADDON.getSetting('hatchetsubmitradio') == 'true'
+        HatchetUser        = ADDON.getSetting('hatchetuser').lower()
+        HatchetPass        = ADDON.getSetting('hatchetpass')
+        if (HatchetSubmitSongs or HatchetSubmitRadio) and HatchetUser and HatchetPass:
             # [service, auth-url, user, pass, submitsongs, submitradio, sessionkey, np-url, submit-url, auth-fail, failurecount, timercounter, timerexpiretime, queue]
-            service = ['librefm', self.LibrefmURL, LibrefmUser, LibrefmPass, LibrefmSubmitSongs, LibrefmSubmitRadio, '', '', '', False, 0, 0, 0, []]
+            service = ['hatchet', self.HatchetURL, HatchetUser, HatchetPass, HatchetSubmitSongs, HatchetSubmitRadio, '', '', '', False, 0, 0, 0, []]
             self.Player = MyPlayer(action = self._service_scrobble, service = service)
 
     def _service_scrobble( self, tags, service ):
