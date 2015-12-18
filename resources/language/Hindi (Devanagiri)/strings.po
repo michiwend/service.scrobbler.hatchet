@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Libre.fm Scrobbler
-# Addon id: service.scrobbler.librefm
-# Addon Provider: Team-Kodi
+# Addon Name: hatchet.is Scrobbler
+# Addon id: service.scrobbler.hatchet
+# Addon Provider: Michael Wendland
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -21,20 +21,20 @@ msgid "General"
 msgstr "सामान्य"
 
 msgctxt "#30004"
-msgid "Submit songs to Libre.fm"
-msgstr "Libre.fm के लिए गाने सबमिट"
+msgid "Submit songs to hatchet.is"
+msgstr "hatchet.is के लिए गाने सबमिट"
 
 msgctxt "#30005"
-msgid "Submit streaming radio to Libre.fm"
+msgid "Submit streaming radio to hatchet.is"
 msgstr "स्ट्रीमिंग रेडियो को लिब्रे.एफ म मे जमा करे"
 
 msgctxt "#30006"
-msgid "Libre.fm username"
-msgstr "Libre.fm उपयोगकर्ता नाम"
+msgid "hatchet.is username"
+msgstr "hatchet.is उपयोगकर्ता नाम"
 
 msgctxt "#30007"
-msgid "Libre.fm password"
-msgstr "Libre.fm पासवर्ड"
+msgid "hatchet.is password"
+msgstr "hatchet.is पासवर्ड"
 
 msgctxt "#32001"
 msgid "Authentication error"

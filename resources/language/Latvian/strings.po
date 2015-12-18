@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Libre.fm Scrobbler
-# Addon id: service.scrobbler.librefm
-# Addon Provider: Team-Kodi
+# Addon Name: hatchet.is Scrobbler
+# Addon id: service.scrobbler.hatchet
+# Addon Provider: Michael Wendland
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -21,5 +21,5 @@ msgid "General"
 msgstr "Vispārīgi"
 
 msgctxt "#30007"
-msgid "Libre.fm password"
-msgstr "Libre.fm parole"
+msgid "hatchet.is password"
+msgstr "hatchet.is parole"
