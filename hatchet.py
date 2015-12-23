@@ -1,4 +1,5 @@
 import requests, time
+from datetime import datetime
 
 class Token:
 
@@ -108,13 +109,14 @@ class HatchetService:
             }, json=data)
 
 
-    def scrobble( self, artist, album, track ):
+    def scrobble( self, artist, album, track, timestamp = datetime.utcnow() ):
         body = {'playbacklogEntry': {
                     'artistString': artist.strip().lower(),
                     'albumString':  album.strip().lower(),
                     'trackString':  track.strip().lower(),
                     'type':         'scrobble',
                     'duration':     -1 #FIXME
+                    'timestamp':    timestamp.isoformat("T") + "Z"
                     }
                 }
 
