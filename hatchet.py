@@ -116,12 +116,21 @@ class HatchetService:
         try:
             r = self._authed_post(self.BaseURL + 'playbacklogEntries', playbacklog_entry)
             r.raise_for_status()
+            # remove entry from queue
+            if playbacklog_entry in self._playbacklog_entry_queue:
+                self._playbacklog_entry_queue.remove(playbacklog_entry)
         except (ConnectionError, Timeout, TooManyRedirects):
             # Request may have been correct but there was a network problem
             # --> queue the entry for later retry.
             if playbacklog_entry not in self._playbacklog_entry_queue:
                 print("request failed, queing plentry")
                 self._playbacklog_entry_queue.append(playbacklog_entry)
+        except Exception(e):
+            # Make sure a queued entry gets removed from the queue when it
+            # failed again due to bad request.
+            if playbacklog_entry in self._playbacklog_entry_queue:
+                self._playbacklog_entry_queue.remove(playbacklog_entry)
+            raise e
 
 
     def scrobble( self, artist, album, track, timestamp=None ):
