@@ -115,7 +115,7 @@ class HatchetService:
                     'albumString':  album.strip().lower(),
                     'trackString':  track.strip().lower(),
                     'type':         'scrobble',
-                    'duration':     -1 #FIXME
+                    'duration':     -1, #FIXME
                     'timestamp':    timestamp.isoformat("T") + "Z"
                     }
                 }
