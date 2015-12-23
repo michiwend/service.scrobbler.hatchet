@@ -149,3 +149,4 @@ class HatchetService:
                 }
 
         r = self._authed_post(self.BaseURL + 'playbacklogEntries', body)
+        r.raise_for_status()
