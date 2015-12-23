@@ -45,7 +45,7 @@ class HatchetService:
         self._username   = username
         self._password   = password
 
-        self._scrobble_queue = []
+        self._playbacklog_entry_queue = []
 
 
     def _login( self ):
@@ -112,23 +112,24 @@ class HatchetService:
             }, json=data)
 
 
-    def _queued_scrobble( self, playbacklog_entry ):
+    def _scrobble_or_queue( self, playbacklog_entry ):
         try:
             r = self._authed_post(self.BaseURL + 'playbacklogEntries', playbacklog_entry)
             r.raise_for_status()
         except (ConnectionError, Timeout, TooManyRedirects):
             # Request may have been correct but there was a network problem
             # --> queue the entry for later retry.
-            if playbacklog_entry not in self._scrobble_queue:
+            if playbacklog_entry not in self._playbacklog_entry_queue:
                 print("request failed, queing plentry")
-                self._scrobble_queue.append(playbacklog_entry)
+                self._playbacklog_entry_queue.append(playbacklog_entry)
 
 
     def scrobble( self, artist, album, track, timestamp=None ):
         if not isinstance(timestamp, datetime):
             timestamp = datetime.utcnow()
 
-        self._queued_scrobble({'playbacklogEntry': {
+        self._scrobble_or_queue(
+                {'playbacklogEntry': {
                     'artistString': artist.strip().lower(),
                     'albumString':  album.strip().lower(),
                     'trackString':  track.strip().lower(),
