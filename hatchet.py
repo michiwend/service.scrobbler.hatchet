@@ -148,6 +148,10 @@ class HatchetService:
                     }
                 })
 
+    def process_queue( self ):
+        for entry in self._playbacklog_entry_queue:
+            self._scrobble_or_queue(entry)
+
 
     def now_playing( self, artist, album, track ):
         body = {'playbacklogEntry': {
