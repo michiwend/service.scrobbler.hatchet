@@ -45,7 +45,7 @@ class HatchetService:
         self._username   = username
         self._password   = password
 
-        self._playbacklog_entry_queue = []
+        self._request_queue = []
 
 
     def _login( self ):
@@ -112,24 +112,25 @@ class HatchetService:
             }, json=data)
 
 
-    def _scrobble_or_queue( self, playbacklog_entry ):
+    def _post_or_queue( self, url, data ):
+        queue_entry = (url, data)
         try:
-            r = self._authed_post(self.BaseURL + 'playbacklogEntries', playbacklog_entry)
+            r = self._authed_post(url, data)
             r.raise_for_status()
             # remove entry from queue
-            if playbacklog_entry in self._playbacklog_entry_queue:
-                self._playbacklog_entry_queue.remove(playbacklog_entry)
+            if queue_entry in self._request_queue:
+                self._request_queue.remove(queue_entry)
         except (ConnectionError, Timeout, TooManyRedirects):
             # Request may have been correct but there was a network problem
             # --> queue the entry for later retry.
-            if playbacklog_entry not in self._playbacklog_entry_queue:
+            if queue_entry not in self._request_queue:
                 print("request failed, queing plentry")
-                self._playbacklog_entry_queue.append(playbacklog_entry)
+                self._request_queue.append(queue_entry)
         except Exception(e):
             # Make sure a queued entry gets removed from the queue when it
             # failed again due to bad request.
-            if playbacklog_entry in self._playbacklog_entry_queue:
-                self._playbacklog_entry_queue.remove(playbacklog_entry)
+            if queue_entry in self._request_queue:
+                self._request_queue.remove(queue_entry)
             raise e
 
 
@@ -137,8 +138,7 @@ class HatchetService:
         if not isinstance(timestamp, datetime):
             timestamp = datetime.utcnow()
 
-        self._scrobble_or_queue(
-                {'playbacklogEntry': {
+        body = {'playbacklogEntry': {
                     'artistString': artist.strip().lower(),
                     'albumString':  album.strip().lower(),
                     'trackString':  track.strip().lower(),
@@ -146,11 +146,14 @@ class HatchetService:
                     'duration':     -1, #FIXME
                     'timestamp':    timestamp.isoformat("T") + "Z"
                     }
-                })
+                }
+
+        self._post_or_queue(self.BaseURL + 'playbacklogEntries', body)
 
     def process_queue( self ):
-        for entry in self._playbacklog_entry_queue:
-            self._scrobble_or_queue(entry)
+        print("processing queue: " + self._request_queue.__str__())
+        for entry in self._request_queue:
+            self._post_or_queue(entry[0], entry[1])
 
 
     def now_playing( self, artist, album, track ):
