@@ -150,6 +150,19 @@ class HatchetService:
 
         self._post_or_queue(self.BaseURL + 'playbacklogEntries', body)
 
+
+    def love_artist( self, artist ):
+        pass
+
+
+    def love_album( self, artist, album ):
+        pass
+
+
+    def love_track( self, artist, track ):
+        pass
+
+
     def process_queue( self ):
         print("processing queue: " + self._request_queue.__str__())
         for entry in self._request_queue:
